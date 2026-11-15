@@ -1,37 +1,34 @@
-# VisualLearn AI: personalized career learning feed
+# VisualLearnAI: AI-narrated video microlearning
 
-A local-first, Instagram-style microlearning website focused on **system design, AI engineering, software engineering, and technical interviews**.
+Vertical, swipeable microlearning for system design, AI engineering, software engineering and technical interview preparation.
 
-## What's implemented
-- Responsive career-learning feed with four tracks and **28 authored, structured micro-lessons**.
-- Daily rotation of four curriculum posts, based on the learner's local calendar and start date.
-- Visual three-node diagrams, knowledge-check quizzes, saved posts, XP, daily progress and streaks.
-- Personalization of tracks, learning level, name, and daily goal.
-- Optional **on-device AI lesson generation** using WebLLM and WebGPU, with structured output validation. Generated lessons join today's feed and are stored locally.
-- Local browser persistence and JSON backup export.
-- Original proof-of-concept preserved at [legacy.html](legacy.html).
+## Implemented
+- Full-screen 9:16 video feed with swipe, keyboard navigation, playback, mute, saves, quizzes and local progress.
+- Published MP4 playback with animated browser previews until rendering is complete.
+- 8 structured career lessons with scripted narration, visual node sequences, and quizzes.
+- Python + Pillow motion-graphics renderer, espeak-ng synthesized voice, FFmpeg MP4 encoding.
+- Automated daily video generation and publishing via GitHub Actions at 11:15 UTC, plus manual workflow dispatch.
+- Static hosting compatible with GitHub Pages or Cloudflare Pages. No paid API keys.
 
-## Run
-Open `index.html` in a browser or serve it locally:
+## Run locally
 ```bash
 python3 -m http.server 8000
 ```
-Open http://localhost:8000.
+Open http://localhost:8000. Before publishing, the browser displays animated previews with browser-generated speech.
 
-## Free hosting
-GitHub Pages: repository **Settings > Pages > Deploy from a branch > main > root**. No build command is required. Cloudflare Pages can also publish the root directory.
+## Generate videos
+Install Python 3, Pillow, ffmpeg, espeak-ng and a DejaVu font. Then:
+```bash
+python3 -m pip install pillow
+python3 scripts/render_videos.py --limit 4
+```
+This writes `videos/*.mp4` and `content/manifest.json`.
 
-## How daily content works
-The app ships with a curated lesson bank for reliable daily delivery without any external API or paid inference. The daily selection changes by calendar date. The user can optionally generate additional AI-authored posts locally on a compatible device; those posts are not automatically generated while the browser is closed.
+## Automate publishing
+Open **Actions > Generate and publish daily learning videos > Run workflow** to create the initial MP4 files. Scheduled runs follow the workflow cron, subject to GitHub Actions scheduling and quota constraints. GitHub Pages must be enabled separately under **Settings > Pages**. Scheduled workflows can be delayed or disabled due to repository inactivity.
 
-## Honest limitations
-This is a complete **single-browser MVP**, not a production multi-user service. No accounts, server database, hosted inference, background daily AI generation, or cross-device synchronization. The AI button requires WebGPU and a large model download, may fail on unsupported devices, and AI output must be fact-checked. Browser localStorage can be cleared. The curated lesson bank rotates after its concepts are exhausted; it is not an infinite stream of novel content.
+## What is and isn't AI
+Narration uses a local speech synthesizer, not a neural TTS voice. The current content pipeline animates **authored structured lessons**; it does not autonomously write novel lessons with a language model. This provides a zero-API-fee baseline and a functional daily video-publishing workflow. True LLM-based script/storyboard generation, content fact-checking, better neural voices, personalization across devices, and large-scale media hosting remain future work. A daily rotation reuses the lesson bank rather than guaranteeing new topics forever.
 
-## Roadmap
-1. Server-side scheduled AI lesson generation with a free/self-hosted model and content validation.
-2. Auth and Postgres persistence for cross-device sync.
-3. Adaptive scheduling using mastery and spaced repetition.
-4. Interactive visual component registry beyond simple flow diagrams.
-5. Content evaluation and moderation before publishing.
-
-No paid API keys are required for the current MVP.
+## Prior versions
+The previous card-based MVP remains in `legacy.html`.

@@ -1,0 +1,172 @@
+{
+  "videos": [
+    {
+      "id": "system-lb",
+      "track": "System Design",
+      "title": "Load balancing explained",
+      "summary": "How traffic reaches healthy application servers",
+      "nodes": [
+        "Clients",
+        "Load Balancer",
+        "App Servers"
+      ],
+      "narration": "A load balancer distributes requests among healthy application instances. Health checks remove failed instances from rotation.",
+      "quiz": {
+        "q": "What detects an unhealthy server?",
+        "options": [
+          "Health checks",
+          "CSS",
+          "Long URLs"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "ai-rag",
+      "track": "AI Engineering",
+      "title": "RAG in one minute",
+      "summary": "How retrieval helps language models use external knowledge",
+      "nodes": [
+        "Question",
+        "Vector Search",
+        "LLM + Context"
+      ],
+      "narration": "Retrieval augmented generation searches a knowledge base for relevant passages and provides them to a language model as context. Answers still require evaluation.",
+      "quiz": {
+        "q": "What is retrieved?",
+        "options": [
+          "Relevant passages",
+          "GPU drivers",
+          "Cookies"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "software-api",
+      "track": "Software Engineering",
+      "title": "An API request's journey",
+      "summary": "Follow a browser request through a backend",
+      "nodes": [
+        "Browser",
+        "API Server",
+        "Database"
+      ],
+      "narration": "The browser sends an HTTPS request. The backend validates inputs, checks permissions, queries storage, and returns a structured response.",
+      "quiz": {
+        "q": "Where should permissions be checked?",
+        "options": [
+          "Backend",
+          "CSS",
+          "Only browser"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "interview-scale",
+      "track": "Interview Prep",
+      "title": "Start a system design interview",
+      "summary": "Clarify, estimate, and reason about tradeoffs",
+      "nodes": [
+        "Requirements",
+        "Capacity",
+        "Tradeoffs"
+      ],
+      "narration": "Before drawing an architecture, clarify scale, traffic, latency, reliability, and constraints. Then explain why your design fits those requirements.",
+      "quiz": {
+        "q": "What should happen first?",
+        "options": [
+          "Clarify requirements",
+          "Choose Kafka",
+          "Pick a database"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "system-cache",
+      "track": "System Design",
+      "title": "Cache-aside pattern",
+      "summary": "Why Redis can reduce database load",
+      "nodes": [
+        "Request",
+        "Redis",
+        "PostgreSQL"
+      ],
+      "narration": "With cache-aside, the application checks Redis first. On a miss, it loads from the database and populates the cache. Plan for expiration and invalidation.",
+      "quiz": {
+        "q": "What is a common cache problem?",
+        "options": [
+          "Stale data",
+          "More CSS",
+          "Longer URLs"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "ai-agent",
+      "track": "AI Engineering",
+      "title": "Safe AI tool calling",
+      "summary": "How agents execute actions safely",
+      "nodes": [
+        "LLM",
+        "Tool Schema",
+        "Validated Result"
+      ],
+      "narration": "A model may propose a tool call, but the application must validate arguments, enforce permissions, handle timeouts, and audit results.",
+      "quiz": {
+        "q": "What protects a tool call?",
+        "options": [
+          "Validation",
+          "Long prompts",
+          "Font size"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "software-index",
+      "track": "Software Engineering",
+      "title": "Database indexes",
+      "summary": "How B-tree indexes speed up reads",
+      "nodes": [
+        "SQL Query",
+        "B-tree Index",
+        "Rows"
+      ],
+      "narration": "Indexes help locate matching records without scanning every row. They also consume storage and slow some writes. Inspect query plans before optimizing.",
+      "quiz": {
+        "q": "What reveals the query plan?",
+        "options": [
+          "EXPLAIN",
+          "CSS",
+          "JSON stringify"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "interview-debug",
+      "track": "Interview Prep",
+      "title": "Debugging under pressure",
+      "summary": "A systematic production debugging workflow",
+      "nodes": [
+        "Reproduce",
+        "Isolate",
+        "Verify Fix"
+      ],
+      "narration": "Start by reproducing the failure and checking telemetry. Narrow the failing component, test a hypothesis, then add regression coverage.",
+      "quiz": {
+        "q": "What comes before a fix?",
+        "options": [
+          "Reproduce",
+          "Rewrite all code",
+          "Deploy"
+        ],
+        "answer": 0
+      }
+    }
+  ]
+}

@@ -1,31 +1,37 @@
-# VisualLearn AI
+# VisualLearn AI: personalized career learning feed
 
-A free, local-first visual microlearning prototype. Open `index.html` in a browser or serve it from any static host.
+A local-first, Instagram-style microlearning website focused on **system design, AI engineering, software engineering, and technical interviews**.
 
-## Features
+## What's implemented
+- Responsive career-learning feed with four tracks and **28 authored, structured micro-lessons**.
+- Daily rotation of four curriculum posts, based on the learner's local calendar and start date.
+- Visual three-node diagrams, knowledge-check quizzes, saved posts, XP, daily progress and streaks.
+- Personalization of tracks, learning level, name, and daily goal.
+- Optional **on-device AI lesson generation** using WebLLM and WebGPU, with structured output validation. Generated lessons join today's feed and are stored locally.
+- Local browser persistence and JSON backup export.
+- Original proof-of-concept preserved at [legacy.html](legacy.html).
 
-- Four interactive sample lessons: Binary Search, Neural Networks, HTTP Requests, Spaced Repetition
-- Three-step visual lesson player, quizzes, XP, streaks, review reminders
-- Progress stored locally in browser localStorage
-- Experimental on-device AI lesson generation using WebLLM and WebGPU, without a paid API key
-- Responsive single-page app, no build step or backend required
-
-## Run locally
-
+## Run
+Open `index.html` in a browser or serve it locally:
 ```bash
 python3 -m http.server 8000
 ```
+Open http://localhost:8000.
 
-Visit http://localhost:8000. Use a modern Chromium browser for the optional WebGPU AI mode. AI mode downloads a large model and can be slow or unsupported on some devices. Offline mode supports only the included topics. The model may generate inaccurate explanations.
+## Free hosting
+GitHub Pages: repository **Settings > Pages > Deploy from a branch > main > root**. No build command is required. Cloudflare Pages can also publish the root directory.
 
-## Deploy for free
+## How daily content works
+The app ships with a curated lesson bank for reliable daily delivery without any external API or paid inference. The daily selection changes by calendar date. The user can optionally generate additional AI-authored posts locally on a compatible device; those posts are not automatically generated while the browser is closed.
 
-Publish the repository as a static site using GitHub Pages or Cloudflare Pages. For Cloudflare Pages, use no build command and `/` as the output directory. GitHub Pages: Settings > Pages > Deploy from a branch > main > root.
+## Honest limitations
+This is a complete **single-browser MVP**, not a production multi-user service. No accounts, server database, hosted inference, background daily AI generation, or cross-device synchronization. The AI button requires WebGPU and a large model download, may fail on unsupported devices, and AI output must be fact-checked. Browser localStorage can be cleared. The curated lesson bank rotates after its concepts are exhausted; it is not an infinite stream of novel content.
 
-## Current limitations
+## Roadmap
+1. Server-side scheduled AI lesson generation with a free/self-hosted model and content validation.
+2. Auth and Postgres persistence for cross-device sync.
+3. Adaptive scheduling using mastery and spaced repetition.
+4. Interactive visual component registry beyond simple flow diagrams.
+5. Content evaluation and moderation before publishing.
 
-This is an MVP, not a production-ready adaptive learning system. It does not offer accounts, server-side sync, citations, arbitrary interactive diagram generation, or guaranteed browser AI availability. Progress is specific to one browser and can be lost if site data is cleared. No paid API is required, but model downloads and device computation are not free of resource use.
-
-## License
-
-MIT license recommended if publishing as open source; no license file has been added yet.
+No paid API keys are required for the current MVP.

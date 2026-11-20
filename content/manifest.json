@@ -19,7 +19,9 @@
           "Long URLs"
         ],
         "answer": 0
-      }
+      },
+      "video": "./videos/system-lb.mp4",
+      "published_at": "2026-11-20"
     },
     {
       "id": "ai-rag",
@@ -40,7 +42,9 @@
           "Cookies"
         ],
         "answer": 0
-      }
+      },
+      "video": "./videos/ai-rag.mp4",
+      "published_at": "2026-11-20"
     },
     {
       "id": "software-api",
@@ -145,7 +149,9 @@
           "JSON stringify"
         ],
         "answer": 0
-      }
+      },
+      "video": "./videos/software-index.mp4",
+      "published_at": "2026-11-20"
     },
     {
       "id": "interview-debug",
@@ -166,7 +172,9 @@
           "Deploy"
         ],
         "answer": 0
-      }
+      },
+      "video": "./videos/interview-debug.mp4",
+      "published_at": "2026-11-20"
     }
   ]
 }

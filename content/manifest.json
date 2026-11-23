@@ -44,7 +44,7 @@
         "answer": 0
       },
       "video": "./videos/ai-rag.mp4",
-      "published_at": "2026-11-22"
+      "published_at": "2026-11-23"
     },
     {
       "id": "software-api",
@@ -67,7 +67,7 @@
         "answer": 0
       },
       "video": "./videos/software-api.mp4",
-      "published_at": "2026-11-22"
+      "published_at": "2026-11-23"
     },
     {
       "id": "interview-scale",
@@ -90,7 +90,7 @@
         "answer": 0
       },
       "video": "./videos/interview-scale.mp4",
-      "published_at": "2026-11-22"
+      "published_at": "2026-11-23"
     },
     {
       "id": "system-cache",
@@ -111,7 +111,9 @@
           "Longer URLs"
         ],
         "answer": 0
-      }
+      },
+      "video": "./videos/system-cache.mp4",
+      "published_at": "2026-11-23"
     },
     {
       "id": "ai-agent",

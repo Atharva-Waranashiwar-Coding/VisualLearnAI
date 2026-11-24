@@ -67,7 +67,7 @@
         "answer": 0
       },
       "video": "./videos/software-api.mp4",
-      "published_at": "2026-11-23"
+      "published_at": "2026-11-24"
     },
     {
       "id": "interview-scale",
@@ -90,7 +90,7 @@
         "answer": 0
       },
       "video": "./videos/interview-scale.mp4",
-      "published_at": "2026-11-23"
+      "published_at": "2026-11-24"
     },
     {
       "id": "system-cache",
@@ -113,7 +113,7 @@
         "answer": 0
       },
       "video": "./videos/system-cache.mp4",
-      "published_at": "2026-11-23"
+      "published_at": "2026-11-24"
     },
     {
       "id": "ai-agent",
@@ -134,7 +134,9 @@
           "Font size"
         ],
         "answer": 0
-      }
+      },
+      "video": "./videos/ai-agent.mp4",
+      "published_at": "2026-11-24"
     },
     {
       "id": "software-index",

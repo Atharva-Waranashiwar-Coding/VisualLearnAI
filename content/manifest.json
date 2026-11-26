@@ -113,7 +113,7 @@
         "answer": 0
       },
       "video": "./videos/system-cache.mp4",
-      "published_at": "2026-11-25"
+      "published_at": "2026-11-26"
     },
     {
       "id": "ai-agent",
@@ -136,7 +136,7 @@
         "answer": 0
       },
       "video": "./videos/ai-agent.mp4",
-      "published_at": "2026-11-25"
+      "published_at": "2026-11-26"
     },
     {
       "id": "software-index",
@@ -159,7 +159,7 @@
         "answer": 0
       },
       "video": "./videos/software-index.mp4",
-      "published_at": "2026-11-25"
+      "published_at": "2026-11-26"
     },
     {
       "id": "interview-debug",
@@ -182,7 +182,7 @@
         "answer": 0
       },
       "video": "./videos/interview-debug.mp4",
-      "published_at": "2026-11-21"
+      "published_at": "2026-11-26"
     }
   ]
 }

@@ -21,7 +21,7 @@
         "answer": 0
       },
       "video": "./videos/system-lb.mp4",
-      "published_at": "2026-11-22"
+      "published_at": "2026-11-27"
     },
     {
       "id": "ai-rag",
@@ -136,7 +136,7 @@
         "answer": 0
       },
       "video": "./videos/ai-agent.mp4",
-      "published_at": "2026-11-26"
+      "published_at": "2026-11-27"
     },
     {
       "id": "software-index",
@@ -159,7 +159,7 @@
         "answer": 0
       },
       "video": "./videos/software-index.mp4",
-      "published_at": "2026-11-26"
+      "published_at": "2026-11-27"
     },
     {
       "id": "interview-debug",
@@ -182,7 +182,7 @@
         "answer": 0
       },
       "video": "./videos/interview-debug.mp4",
-      "published_at": "2026-11-26"
+      "published_at": "2026-11-27"
     }
   ]
 }
